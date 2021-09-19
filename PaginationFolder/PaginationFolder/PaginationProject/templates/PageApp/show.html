@@ -1,0 +1,25 @@
+{% extends 'PageApp/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Mobiles</h1>
+    {% for i in record %}
+    <div class="row">
+        <div class="col-md-12">
+            <img style="float:left; width:200px; height:300px; margin-right:10px" src="{{i.image.url}}">
+            <p>Name {{i.mobile_name}}</p>
+            <p>Brand {{i.brand}}</p>
+            <p>RAM {{i.ram}}</p>
+            <p>Price {{i.price}}</p>
+            <p>Internal Storage {{i.internal_storage}}</p>
+            <p>Battery Capacity {{i.battery_capacity}}</p>
+            <p>Sim Type {{i.sim_type}}</p>
+            <br><br>
+
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
